@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState, createContext } from 'react'
 
-const MenuManager = () => {
+interface ContextState {
+  open: boolean,
+  setOpen: (arg: boolean) => void
+}
+
+export const MenuContext = createContext<ContextState>({
+  open: false,
+  setOpen: () => {}
+})
+
+const MenuManager:React.FC<React.ReactNode> = ({children}) => {
+  const [open, setOpen] = useState(false)
   return (
-    <div>MenuManager</div>
+    <MenuContext.Provider value={{open, setOpen}}>{children }</MenuContext.Provider>
   )
 }
 

@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MenuContext } from './MenuManager';
 
 const MenuButton = () => {
+
+const {open, setOpen} = useContext(MenuContext)
+
   return (
-      <div className="fixed left-[11px] top-[100px] z-20">
-          <button className="cursor-pointer w-12 h-12 " onClick={() => { }}>
-              <span className="before:content-[''] after:content-[''] before:w-[2px] after:w-[2px] before:h-[48px] after:h-[48px] before:absolute after:absolute before:bg-zinc-800 after:bg-zinc-900 before:left-[30%] after:left-[50%] before:top-[50%] after:top-[50%] before:block after:block before:translate-x-5 after:translate-x-5 before:scale-75 after:scale-75 before:rotate-180 after:rotate-180 before:transition-all after:transition-all "></span>
+      <div className={`fixed left-[11px] top-[100px] z-20 transition-all duration-700 ${open ? 'delay-300' : ''}`}>
+          <button className={`cursor-pointer w-12 h-12 transition-all duration-700 ${open ? 'translate-x-20 rotate-90 delay-300' : ''}`} onClick={() => setOpen(!open)}>
+              <span className={` before:rotate-180 after:rotate-180 before:transition-all after:transition-all ${open ? 'after:bg-white before:translate-x-[-50%] before:translate-y-[-50%] before:rotate-[315deg] after:translate-x-[-50%] after:translate-y-[-50%] after:rotate-[45deg] before:bg-white' : ''}`}>
+
+                <svg xmlns="http://www.w3.org/2000/svg" className={`h-12 w-12 ${open ? 'text-white' : 'text-zinc-800'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                </svg>
+
+              </span>
           </button>
       </div>
   )

@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/Link'
 import { Facebook, Instagram, Youtube, Dribbble, Twitch } from "react-feather";
 import cn from "classnames";
+import { MenuContext } from './MenuManager';
+import styles from './Menu.module.css';
 
 const internalLinks = [
   {
@@ -61,20 +63,23 @@ const externalLinks = [
 
 
 const MenuContent = () => {
-  return (
-    <div className="meni-holder">
-      <div className="menu-inside">
-        <div className="menu-nav-container">
-          
-          <ul className="internall-nav-links">
 
-            {internalLinks.map((link) => (
+const {open} = useContext(MenuContext)
+
+  return (
+    <div className="menu-holder ">
+      <div className={cn(`${styles.menuInside} z-10 duration-500 transition-transform text-white  ${open ? 'translate-x-0' : 'translate-x-[-100%]'}`) }>
+        <div className={styles.menuContainer}>
+          
+          <ul className={styles.internalLinks}>
+
+            {internalLinks.map((link, i) => (
               <Link key={link.url} href={link.url}>
-                <li className="">
-                  <a className="">
+                <li className={`${styles.link} ${open ? ` translate-x-0 ease-in-out` : '-translate-x-full'}`}>
+                  <a className={`${styles.links} transition-all`}>
                     {link.component}
                   </a>
-                  <img className="" src={link.img} />
+                  <img className="pointer-events-none aspect-video block w-[30vw] absolute top-[50%] -translate-x-[30px] translate-y-[-50%] right-[10%] object-cover transition-transform ease-in-out duration-500 filter brightness-75 opacity-0" src={link.img} />
                 </li>
               </Link>
             ))}
@@ -82,12 +87,12 @@ const MenuContent = () => {
           </ul>
 
 
-           <ul className="external-nav-links">
+           <ul className="external-nav-links mt-[100px] flex flex-wrap z-30">
 
-            {internalLinks.map((link) => (
+            {externalLinks.map((link) => (
               <Link key={link.url} href={link.url}>
-                <li className="">
-                  <a className="">
+                <li className="mr-4 md:mr-8 text-zinc-800 z-20">
+                  <a className="-translate-x-[100%] text-white delay-100  transition-all last-of-type:mr-0">
                     {link.component}
                   </a>
                 

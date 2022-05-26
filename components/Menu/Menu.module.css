@@ -1,0 +1,53 @@
+.menuInside {
+  @apply fixed bg-zinc-800;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menuContainer {
+  position: relative;
+  left: 15%;
+  top: 160px;
+  overflow: hidden;
+  width: calc(90vw - 150px);
+}
+
+.internalLinks {
+  transition: all 1s ease-in-out;
+  transition-duration: 1000ms;
+}
+
+.link {
+  @apply duration-1000;
+}
+
+.link:first-of-type {
+  transition-delay: 200ms;
+}
+.link:nth-of-type(2n) {
+  transition-delay: 400ms;
+}
+.link:nth-of-type(3n) {
+  transition-delay: 600ms;
+}
+.link:nth-of-type(4n) {
+  transition-delay: 800ms;
+}
+.link:nth-of-type(5n) {
+  transition-delay: 900ms;
+}
+
+.links {
+  font-size: clamp(25px, 4vw, 52px);
+  line-height: 1.1em;
+  @apply hover:font-bold;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link:hover img {
+  opacity: 1;
+  transform: translateX(30px) translateY(-50%);
+}
