@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Facebook, Instagram, Youtube, Dribbble, Twitch } from "react-feather";
 import cn from "classnames";
 import { MenuContext } from './MenuManager';
