@@ -5,12 +5,15 @@ import MenuContent from './MenuContent';
 const Menu = () => {
   return (
     <Fragment>
+      
+        <MenuButton />
+        <MenuContent />
+      
+    </Fragment>
+  )
+}
+
 
     
-      <MenuButton />
-      <MenuContent />
-  </Fragment>
-      )
-}
 
 export default Menu

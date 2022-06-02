@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   
   return (
     <Fragment>
-        <MenuManager>
-            <Header />
+        <MenuManager >
+            <Header  />
             <Component {...pageProps} />
         </MenuManager>
     </Fragment>

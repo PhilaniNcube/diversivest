@@ -8,8 +8,6 @@
   position: relative;
   left: 15%;
   top: 160px;
-  overflow: hidden;
-  width: calc(90vw - 150px);
 }
 
 .internalLinks {

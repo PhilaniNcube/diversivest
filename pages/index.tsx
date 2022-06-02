@@ -1,14 +1,23 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Fragment } from 'react';
 import ContactButton from '../components/ContactButton';
 
 const Home: NextPage = () => {
   return (
-    <div className="h-[100vh] flex items-center relative w-[calc(100vw-126px)] ml-[70px] pl-16 border-l border-zinc-800 mx-auto">
-      <h1 className="font-bold text-4xl leading-7 md:text-3xl lg:text-[100px]  mb-[10vh] max-w-[70vw] lg:max-w-[80vw] uppercase text-zinc-800">Athena Media <br /> Web Development</h1>
+    <Fragment>
+    <div className="min-h-screen flex items-center relative min-w-screen pl-16 mx-auto">
       <ContactButton />
-    </div>
+      
+      <h1 className="font-bold text-2xl md:text-4xl lg:text-8xl  mb-[10vh] max-w-[70vw] lg:max-w-[80vw] uppercase text-zinc-800">We Help Build <br /> <span className="text-sky-500">Your Online</span> <br />Presence</h1>
+      </div>
+      <div className="min-h-screen bg-zinc-800">
+        <div className="max-w-7xl mx-auto py-12">
+          
+        </div>
+      </div>
+    </Fragment>
   )
 }
 
