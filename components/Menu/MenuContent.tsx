@@ -19,7 +19,7 @@ const internalLinks = [
       "https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80",
   },
   {
-    url: "#3",
+    url: "/studio",
     component: <span>Studio</span>,
     img:
       "https://images.unsplash.com/photo-1554941829-202a0b2403b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
@@ -30,12 +30,7 @@ const internalLinks = [
     img:
       "https://images.unsplash.com/photo-1593697821028-7cc59cfd7399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80",
   },
-  {
-    url: "#5",
-    component: <span>Career</span>,
-    img:
-      "https://images.unsplash.com/photo-1588200618450-3a5b1d3b9aa5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
-  },
+
 ];
 
 const externalLinks = [
@@ -67,10 +62,10 @@ const MenuContent = () => {
 const {open, setOpen} = useContext(MenuContext)
 
   return (
-  
+
       <div className={cn(`${styles.menuInside} w-full h-screen border-r border-zinc-900 z-10 duration-500 transition-transform text-white  ${open ? 'translate-x-0' : 'translate-x-[-100%]'}`) }>
         <div className={`${styles.menuContainer} w-[90%]`}>
-          
+
           <ul className={styles.internalLinks}>
 
             {internalLinks.map((link, i) => (
@@ -95,7 +90,7 @@ const {open, setOpen} = useContext(MenuContext)
                   <a className="-translate-x-[100%] text-white delay-100  transition-all last-of-type:mr-0">
                     {link.component}
                   </a>
-                
+
                 </li>
               </Link>
             ))}
@@ -104,7 +99,7 @@ const {open, setOpen} = useContext(MenuContext)
 
       </div>
       </div>
-   
+
   )
 }
 

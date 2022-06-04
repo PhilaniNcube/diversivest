@@ -1,18 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { Fragment } from 'react';
-import ContactButton from '../components/ContactButton';
-import Hero from '../components/Hero';
-import SectionOne from '../components/SectionOne';
+import React, {Fragment} from 'react'
+import Hero from '../components/Hero'
+import SectionOne from '../components/SectionOne'
+import Featured from '../components/Featured'
 
-const Home: NextPage = () => {
+const index = () => {
   return (
     <Fragment>
       <Hero />
       <SectionOne />
+      <Featured />
     </Fragment>
   )
 }
 
-export default Home
+export default index
