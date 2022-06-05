@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
 import React from 'react'
+import ProjectsComponent from '../components/Projects'
 
 const Projects: NextPage = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <h1 className="text-2xl uppercase md:text-6xl font-bold">Projects</h1>
+    <div className="min-h-screen">
+
+        <ProjectsComponent />
 
     </div>
   )

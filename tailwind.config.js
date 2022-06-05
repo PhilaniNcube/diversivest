@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage : {
+        'projects': 'url(/images/projects.jpg)'
+      },
         gridTemplateColumns: {
           '100': '100px auto',
           'featured': 'repeat(2, auto)',
