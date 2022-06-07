@@ -4,9 +4,6 @@ import Link from 'next/link'
 function Footer() {
 
 let date = new Date()
-
-console.log(date.getFullYear())
-
 let year = date.getFullYear()
 
 
