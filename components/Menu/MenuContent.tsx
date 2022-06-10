@@ -10,25 +10,25 @@ const internalLinks = [
     url: "/",
     component: <span>Home</span>,
     img:
-      "https://images.unsplash.com/photo-1615713170963-2595d2c721bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+      "/images/dev.jpeg",
   },
   {
     url: "/projects",
     component: <span>Projects</span>,
     img:
-      "https://images.unsplash.com/photo-1534120247760-c44c3e4a62f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2148&q=80",
+      "/images/projects.jpeg",
   },
   {
     url: "/team",
     component: <span>Team</span>,
     img:
-      "https://images.unsplash.com/photo-1554941829-202a0b2403b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80",
+      "/images/team.jpeg",
   },
   {
     url: "/contact",
     component: <span>Contact</span>,
     img:
-      "https://images.unsplash.com/photo-1593697821028-7cc59cfd7399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80",
+      "/images/contact.jpeg",
   },
 
 ];
