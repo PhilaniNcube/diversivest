@@ -22,7 +22,7 @@ const Projects = () => {
       </div>
       <section className="max-w-7xl mx-auto px-6 py-12 lg:px-0">
 
-        <div className="w-full mt-3 grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="w-full mt-3 grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project: ProjectType , index: number) => (
           <Link key={index} href={project.url}>
           <div className="w-full shadow-lg overflow-hidden group rounded-md cursor-pointer"  >
@@ -31,9 +31,9 @@ const Projects = () => {
             </div>
                <div className="px-4 py-2 group-hover:opacity-90">
 
-               <p className="text-lg text-zinc-700 font-bold">{project.name}</p>
+               <p className="text-sm md:text-lg text-zinc-700 font-bold">{project.name}</p>
                <Link href={project.url}><a className="text-zinc-700 font-medium">{project.url}</a></Link>
-               <p className="text-sm text-zinc-700">{project.subtitle}</p>
+               <p className="text-xs md:text-sm text-zinc-700">{project.subtitle}</p>
                </div>
           </div>
           </Link>
