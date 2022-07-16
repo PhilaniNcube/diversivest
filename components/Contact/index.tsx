@@ -9,7 +9,7 @@ const index = () => {
           <h1 className="text-xl md:text-2xl xl:text-4xl font-extrabold leading-5 md:leading-6 xl:leading-9 text-center text-gray-800">Contact us</h1>
           <div className="mt-8 xl:mt-10 w-48 space-y-4 flex flex-col items-start justify-start">
             <p className="text-lg xl:text-xl leading-4 xl:leading-5 text-gray-800">Email Address</p>
-            <p className="text-base leading-normal text-gray-600">info@diversivest.co.za </p>
+            <p className="text-base leading-normal text-gray-600">info@athenamedia.co.za </p>
           </div>
           <h1 className="mt-10 md:mt-12 xl:mt-14 text-xl xl:text-2xl leading-5 xl:leading-normal text-gray-800">Drop us a line</h1>
           <div className="mt-6 xl:mt-8 flex w-full flex-col justify-start items-start space-y-4 md:space-y-6 xl:space-y-8">

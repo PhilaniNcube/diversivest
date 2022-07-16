@@ -19,6 +19,7 @@ const projects: ProjectType[] = [
         subtitle: 'Gas geyser installation & sales'
     },
 
+
     {
         name: 'Ink Finance',
         url: 'https://inkfinance.co.za',
